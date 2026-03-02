@@ -1,1 +1,22 @@
-<p>user-bio works!</p>
+<div class="bio">
+  <h3>Bio</h3>
+
+  <div *ngIf="!isEditing; else editMode">
+    <p>{{ bio }}</p>
+    <button (click)="startEdit()">Edit</button>
+  </div>
+
+  <ng-template #editMode>
+    <textarea
+      [value]="draftBio"
+      (input)="draftBio = $any($event.target).value"
+      rows="4"
+      cols="40">
+    </textarea>
+
+    <div>
+      <button (click)="save()">Save</button>
+      <button (click)="cancel()">Cancel</button>
+    </div>
+  </ng-template>
+</div>

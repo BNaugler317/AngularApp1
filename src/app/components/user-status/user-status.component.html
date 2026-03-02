@@ -1,1 +1,4 @@
-<p>user-status works!</p>
+<div class="status">
+  <p>Status: {{ isOnline ? 'Online' : 'Offline' }}</p>
+  <button (click)="toggleStatus()">Toggle Status</button>
+</div>

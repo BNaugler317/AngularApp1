@@ -1,0 +1,22 @@
+.status {
+  text-align: center;
+}
+
+.status p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4da6ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #2f8fe6;
+}
